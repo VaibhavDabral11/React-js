@@ -15,3 +15,4 @@ $ sudo apt install nodejs
 $ npx create-react-app my-app 
 ```
 3.  
+![image](https://user-images.githubusercontent.com/116658648/212622148-25ff2d61-f81b-4056-9f85-ff9906306c7b.png)
