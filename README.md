@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # History of React and why developers build this 
 
 React is a popular JavaScript library for building user interfaces. It was first introduced in 2013 by Facebook developers Jordan Walke and Tom Occhino. The idea behind React was to create a library that could help developers build complex user interfaces with high performance and a modular approach.
