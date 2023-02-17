@@ -21,7 +21,7 @@ Creating custom components is one of the core concepts in React. In React, a com
 
 ## 2. Props In React
 
-In ReactJS, "props" is a short form of "properties", which are used to pass data between components in a React application.
+In ReactJS, "props" stand for "properties", which are used to pass data between components in a React application.
 
 Props are used to pass data and functionality from one React component to another, allowing you to create a more modular and reusable application. When a component is rendered in a React application, it can receive "props" as an argument, which is an object that contains any data or functions that the parent component wants to pass down to the child component.
 
@@ -51,6 +51,7 @@ In this example, we define a 'Greeting' component that receives two props, 'name
 By using props, we can easily pass data between components and create reusable, modular code. Props can be used to pass any kind of data or functionality between components, including strings, numbers, booleans, objects, and functions.
 
 ### Propstypes In React
+
 PropTypes is a feature in React that allows you to specify the types of the props that a component should expect to receive. This helps to catch errors early and provides more robust type checking for your React components.
 
 ```@ruby
@@ -59,8 +60,8 @@ npm install prop-types
 
 PropTypes is an optional feature and it is not enabled by default. To use PropTypes, you need to install the prop-types package from NPM:
 
-
 Then you can import it in your React component and use it to specify the expected types of your props:
+
 ```@ruby
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -86,6 +87,10 @@ In this example, we've imported the 'PropTypes' module and used it to specify th
 
 By defining propTypes, you can ensure that your React components are receiving the correct data types and prevent potential bugs from occurring. If a component receives a prop of the wrong type, React will throw a warning in the console, helping you to catch and fix the error early in the development process.
 
+### Hooks In React  
+
+
+
 # Follow these commands given bellow to install react in your system .
 1. Install node using given bellow command in terminal .
 
@@ -96,7 +101,7 @@ $ sudo apt install nodejs
 ```ruby
 $ npx create-react-app my-app 
 ```
-=======
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
