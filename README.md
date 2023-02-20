@@ -87,8 +87,48 @@ In this example, we've imported the 'PropTypes' module and used it to specify th
 
 By defining propTypes, you can ensure that your React components are receiving the correct data types and prevent potential bugs from occurring. If a component receives a prop of the wrong type, React will throw a warning in the console, helping you to catch and fix the error early in the development process.
 
-### Hooks In React  
+### Hooks In React : 
 
+1. useState : use to change the state() of the component . 
+2. useEffect : use to fetch the data from the endpoint .
+
+3. useContext 
+In ReactJS, the `useContext` hook is used to access context values from a parent component in a child component without the need to pass props down through intermediary components.
+
+Here's an example of how to use useContext:
+
+1. First, create a context in a parent component by using the createContext function:
+```
+import React, { createContext } from 'react';
+
+const MyContext = createContext();
+
+2. Then, set the value of the context in the parent component:
+```
+function ParentComponent() {
+  const myData = { name: 'John', age: 30 };
+
+  return (
+    <MyContext.Provider value={myData}>
+      <ChildComponent />
+    </MyContext.Provider>
+  );
+}
+```
+
+In this example, myData is an object that will be made available to all child components that use the MyContext context.
+
+3. In the child component, use the useContext hook to access the context value:
+```
+function ChildComponent() {
+  const myData = useContext(MyContext);
+
+  return <div>{myData.name} is {myData.age} years old.</div>;
+}
+```
+In this example, the myData variable is set to the value passed into the MyContext.Provider in the parent component. The useContext hook is used to access the context value directly in the child component.
+
+Note that the useContext hook can only be used inside a function component or a custom hook, and it takes the context object created by the createContext function as its argument.
 
 
 # Follow these commands given bellow to install react in your system .
