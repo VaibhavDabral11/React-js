@@ -89,10 +89,12 @@ By defining propTypes, you can ensure that your React components are receiving t
 
 ### Hooks In React : 
 
-1. useState : use to change the state() of the component . 
-2. useEffect : use to fetch the data from the endpoint .
+1. [useState](https://github.com/VaibhavDabral11/usestate-in-react) : use to change the state(data) of the component.
+ 
+2. useEffect : use to fetch the data from the endpoint.
 
-3. useContext 
+3. useContext(parent class to child class to transfer data) 
+
 In ReactJS, the `useContext` hook is used to access context values from a parent component in a child component without the need to pass props down through intermediary components.
 
 Here's an example of how to use useContext:
@@ -102,12 +104,12 @@ Here's an example of how to use useContext:
 import React, { createContext } from 'react';
 
 const MyContext = createContext();
+```
 
 2. Then, set the value of the context in the parent component:
 ```
 function ParentComponent() {
   const myData = { name: 'John', age: 30 };
-
   return (
     <MyContext.Provider value={myData}>
       <ChildComponent />
@@ -115,7 +117,6 @@ function ParentComponent() {
   );
 }
 ```
-
 In this example, myData is an object that will be made available to all child components that use the MyContext context.
 
 3. In the child component, use the useContext hook to access the context value:
