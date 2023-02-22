@@ -5,7 +5,7 @@ import Todos from "./myComponents/Todos";
 import Addtodo from "./myComponents/Addtodo";
 import { About } from "./myComponents/About";
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   let initTodo;
   if (localStorage.getItem("todos") === null) {
@@ -24,6 +24,7 @@ function App() {
         return e !== todo;
       })
     );
+    console.log("deleted", todos);
     localStorage.setItem("todos", JSON.stringify(todos));
   };
   const addTodo = (title, Desc) => {
@@ -47,22 +48,23 @@ function App() {
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
+
   return (
     <>
       <Header title="Todos" searchbar={false} />
-      <Router>
+      <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={
+          <Route path="/" element={
               <>
                 <Addtodo addTodo={addTodo} />
                 <Todos todos={todos} onDelete={onDelete} />
               </>
             }
-          ></Route>
-          <Route exact path="/about" element={<About />}></Route>
+          > </Route>
+        <Route path="/about" element={<About />} />
         </Routes>
-      </Router>
-      <Footer/>
+      </BrowserRouter>
+      <Footer />
     </>
   );
 }
